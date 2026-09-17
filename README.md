@@ -3,7 +3,6 @@
 The AI interface to Nimiq. Ask what you want to do — Nimglyde understands Nimiq, finds what you need, and helps you get there. Wallet-gated chat, 129 verified Mini Apps, live NIM price, and grounded answers from official docs.
 
 **Live Demo (Render):** **App:** https://nimglyde.onrender.com · **API:** https://nimglyde-api.onrender.com · **Health:** https://nimglyde-api.onrender.com/health · **Price:** https://nimglyde-api.onrender.com/api/price
-> Also on Vercel: App https://nimglyde-1.vercel.app · API https://nimglyde-eosin.vercel.app
 
 **Stack:** Hono + Groq (OpenAI fallback) · React 18 + Vite · Nimiq Hub API + Mini App SDK · CoinGecko
 
@@ -127,14 +126,10 @@ All APIs have per-IP rate limits and a 64KB body cap. Daily quota is 300/day per
 
 **Live (Render) — current:**
 
-- **API:** https://nimglyde-api.onrender.com — Web Service, Root `backend`, Build `npm install`, Start `npm run start`, env `GROQ_API_KEYS`, `ALLOW_ORIGINS=https://nimglyde.onrender.com,https://nimglyde-1.vercel.app`
+- **API:** https://nimglyde-api.onrender.com — Web Service, Root `backend`, Build `npm install`, Start `npm run start`, env `GROQ_API_KEYS`, `ALLOW_ORIGINS=https://nimglyde.onrender.com`
 - **Web:** https://nimglyde.onrender.com — Static Site, Root `apps/web`, Build `npm install && npm run build`, Publish `dist`, env `VITE_BACKEND_URL=https://nimglyde-api.onrender.com`
 
-**Also live (Vercel):**
-
-- API https://nimglyde-eosin.vercel.app · Web https://nimglyde-1.vercel.app — Root `backend/vercel.json` rewrites everything to `/api` (`api/index.ts`).
-- Set env vars in Vercel dashboard. Ensure `NODE_ENV=production` + explicit `ALLOW_ORIGINS=https://your-frontend.vercel.app`.
-- The file store `data/store.json` is **ephemeral on serverless** — swap `src/lib/store.ts` to Redis/KV before handling real NIM payments.
+> Vercel deploy also works — Root `backend/vercel.json` rewrites everything to `/api` (`api/index.ts`). Set `NODE_ENV=production` + explicit `ALLOW_ORIGINS=https://your-frontend.vercel.app`. File store `data/store.json` is ephemeral on serverless — swap to Redis/KV for prod.
 
 **Frontend — any static host**
 
