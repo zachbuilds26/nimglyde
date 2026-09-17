@@ -1,7 +1,3 @@
 {
-  "version": 2,
-  "functions": {
-    "api/index.ts": { "includeFiles": "src/**" }
-  },
   "rewrites": [{ "source": "/(.*)", "destination": "/api" }]
 }
