@@ -801,7 +801,6 @@ export default function App() {
     } catch {
       // storage blocked - session simply won't survive reload
     }
-    pushToast("ok", "Wallet connected.");
   }
 
   function disconnectWallet() {
@@ -816,7 +815,6 @@ export default function App() {
     } catch {
       // ignore
     }
-    pushToast("info", "Wallet disconnected.");
   }
 
   function cancelConnect() {
