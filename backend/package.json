@@ -1,0 +1,25 @@
+{
+  "name": "nimglyde-backend",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Nimglyde backend - AI interface to the Nimiq ecosystem",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "start": "tsx src/server.ts",
+    "typecheck": "tsc --noEmit",
+    "lint": "tsc --noEmit --noUnusedLocals --noUnusedParameters",
+    "test": "echo \"no tests yet\" && exit 0",
+    "verify-groq": "tsx src/verify-groq.ts"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.13.7",
+    "dotenv": "^16.4.5",
+    "hono": "^4.7.4"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}

@@ -1,0 +1,6 @@
+# Secrets - NEVER commit these (competition rules DQ for hardcoded keys)
+.env
+# Local ledger + deps + build output
+data/
+node_modules/
+dist/

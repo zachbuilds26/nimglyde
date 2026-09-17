@@ -1,0 +1,36 @@
+# Secrets - NEVER commit
+.env
+.env.*
+!.env.example
+
+# Deps
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build outputs
+dist/
+build/
+.next/
+out/
+apps/web/dist/
+
+# Local ledger + caches
+data/
+backend/data/
+*.tsbuildinfo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Logs + tmp
+logs/
+*.log
+tmp/
+Temp/
